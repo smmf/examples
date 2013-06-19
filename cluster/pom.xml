@@ -88,6 +88,11 @@
                         <artifactId>fenix-framework-backend-jvstm-datagrid-code-generator</artifactId>
                         <version>${version.fenixframework}</version>
                     </dependency>
+                    <dependency>
+                        <groupId>pt.ist</groupId>
+                        <artifactId>fenix-framework-backend-jvstm-lf-code-generator</artifactId>
+                        <version>${version.fenixframework}</version>
+                    </dependency>
                 </dependencies>
             </plugin>
 
@@ -153,6 +158,11 @@
         <dependency>
             <groupId>pt.ist</groupId>
             <artifactId>fenix-framework-backend-jvstm-datagrid-runtime</artifactId>
+            <version>${version.fenixframework}</version>
+        </dependency>
+        <dependency>
+            <groupId>pt.ist</groupId>
+            <artifactId>fenix-framework-backend-jvstm-lf-runtime</artifactId>
             <version>${version.fenixframework}</version>
         </dependency>
         <dependency>

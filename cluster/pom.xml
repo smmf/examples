@@ -20,6 +20,47 @@
         <version.slf4j.api>1.7.2</version.slf4j.api>
     </properties>
 
+    <profiles>
+        <profile>
+            <!-- in the default-profile jvstm-fenix is active -->
+            <id>default-profile</id>
+            <activation>
+                <property>
+                    <name>code.generator.class</name>
+                    <value>!pt.ist.fenixframework.backend.jvstm.lf.JvstmLockFreeCodeGenerator</value>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>jvstm</groupId>
+                    <artifactId>jvstm</artifactId>
+                    <version>2.0</version>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+
+        <profile>
+            <!-- in this profile jvstm-lock-free is active instead -->
+            <id>jvstm-lock-free-profile</id>
+            <activation>
+                <property>
+                    <name>code.generator.class</name>
+                    <value>pt.ist.fenixframework.backend.jvstm.lf.JvstmLockFreeCodeGenerator</value>
+                </property>
+            </activation>
+            <dependencies>
+                <dependency>
+                    <groupId>jvstm</groupId>
+                    <artifactId>jvstm-fenix</artifactId>
+                    <version>1.4</version>
+                    <scope>provided</scope>
+                </dependency>
+            </dependencies>
+        </profile>
+    </profiles> 
+
+
     <build>
         <plugins>
             <plugin>

@@ -203,7 +203,7 @@
         </dependency>
         <dependency>
             <groupId>pt.ist</groupId>
-            <artifactId>fenix-framework-backend-jvstm-lf-runtime</artifactId>
+            <artifactId>fenix-framework-backend-jvstm-lf-infinispan</artifactId>
             <version>${version.fenixframework}</version>
         </dependency>
         <dependency>
